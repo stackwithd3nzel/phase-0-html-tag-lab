@@ -29,21 +29,5 @@
     <li>Cover with second slice of bread</li>
     <li>Turn over and fry for 2 minutes</li>
   </ol>
-
 </body>
 </html>
-
-// filepath: /home/d3nzel/code/phase-0-html-tag-lab/test/indexTest.js
-const fs = require('fs');
-const path = require('path');
-const { JSDOM } = require('jsdom');
-
-const html = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8');
-let dom;
-let document;
-
-beforeEach(() => {
-  dom = new JSDOM(html);
-  document = dom.window.document;
-  global.document = document;
-});
